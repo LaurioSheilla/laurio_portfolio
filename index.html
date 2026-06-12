@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lauriosheilla Mae | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav-inner">
+      <div class="logo">My Portfolio<span class="logo-dot">.</span></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#objective">Objective</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+    </nav>
+    <ul class="mobile-nav" id="mobileNav">
+      <li><a href="#about" onclick="closeMobileNav()">About</a></li>
+      <li><a href="#education" onclick="closeMobileNav()">Education</a></li>
+      <li><a href="#objective" onclick="closeMobileNav()">Objective</a></li>
+      <li><a href="#projects" onclick="closeMobileNav()">Projects</a></li>
+      <li><a href="#skills" onclick="closeMobileNav()">Skills</a></li>
+      <li><a href="#certifications" onclick="closeMobileNav()">Certifications</a></li>
+      <li><a href="#contact" onclick="closeMobileNav()">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- HERO -->
+  <section id="about" class="hero">
+    <div class="hero-inner container">
+      <div class="hero-badge">Available for opportunities</div>
+      <h1>Hi, I'm <span class="accent">Lauriosheilla Mae</span></h1>
+      <p class="hero-sub">BS Information Technology student at Panpacific University — passionate about UI design, web development, and cloud technologies.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">↓</div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section bg-alt">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <p class="edu-degree">Bachelor of Science in Information Technology</p>
+          <p class="edu-school">Panpacific University</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJECTIVE -->
+  <section id="objective" class="section">
+    <div class="container">
+      <h2 class="section-title">Objective</h2>
+      <blockquote class="objective-quote">
+        I am a motivated and responsible individual seeking an opportunity to apply my knowledge and skills while contributing to the organization's success. I am eager to learn and committed to delivering quality work — willing to take on challenges and continuously improve my abilities while working effectively with a team.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section bg-alt">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-desc">Click on any project to learn more about it.</p>
+      <div class="projects-grid">
+
+        <!-- Project Card 1 — replace src and data-* with your own -->
+        <div class="project-card" onclick="openModal('proj1')">
+          <div class="project-thumb">
+            <img src="Projects/Picture1.png" alt="Pic 1">
+            <div class="project-overlay">
+              <span>View Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Registrar Management System</h3>
+            <p class="project-tag">Web Development</p>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card" onclick="openModal('proj2')">
+          <div class="project-thumb">
+            <img src="Projects/Picture2.png" alt="Pic 2">
+            <div class="project-overlay">
+              <span>View Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Barangray Incident Report System</h3>
+            <p class="project-tag">Web Development</p>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card" onclick="openModal('proj3')">
+          <div class="project-thumb">
+            <img src="Projects/Picture3.png" alt="Pic 3">
+            <div class="project-overlay">
+              <span>View Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Grocery List Application</h3>
+            <p class="project-tag">App Development</p>
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project-card" onclick="openModal('proj4')">
+          <div class="project-thumb">
+            <img src="Projects/Picture4.png" alt="Pic 4">
+            <div class="project-overlay">
+              <span>View Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Grade Calculator Application</h3>
+            <p class="project-tag">App Development</p>
+          </div>
+        </div>
+
+        <!-- Project Card 5 -->
+        <div class="project-card" onclick="openModal('proj5')">
+          <div class="project-thumb">
+            <img src="Projects/Picture5.png" alt="Pic 5">
+            <div class="project-overlay">
+              <span>View Details</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Android and Web Base Disaster Preparedness Application</h3>
+            <p class="project-tag">System and App Development</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+      <img class="modal-img" id="modalImg" src="" alt="">
+      <div class="modal-body">
+        <span class="modal-tag" id="modalTag"></span>
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-tech" id="modalTech"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="two-col">
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon">💻</span>
+            <h3>Technical Skills</h3>
+          </div>
+          <ul class="skill-list">
+            <li>Microsoft Office Tools</li>
+            <li>UI Design</li>
+            <li>Canva</li>
+            <li>Web Development Fundamentals</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon">🤝</span>
+            <h3>Soft Skills</h3>
+          </div>
+          <ul class="skill-list">
+            <li>Works Well Under Pressure</li>
+            <li>Team Player</li>
+            <li>Strong Communication</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section bg-alt">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="two-col">
+        <div class="cert-card">
+          <div class="cert-logo aws">AWS</div>
+          <h3>Amazon Web Services</h3>
+          <ul class="cert-list">
+            <li>Cloud Practitioner Essentials</li>
+            <li>Technical Essentials</li>
+            <li>Certified AI Practitioner</li>
+            <li>Machine Learning Algorithms</li>
+          </ul>
+        </div>
+        <div class="cert-card">
+          <div class="cert-logo hp">HP</div>
+          <h3>HP LIFE</h3>
+          <ul class="cert-list linked">
+            <li><a href="https://www.life-global.org/certificate/40670242-ec1b-49ae-9721-ecaffc494927" target="_blank" rel="noopener">Effective Business Websites ↗</a></li>
+            <li><a href="https://www.life-global.org/certificate/67dc2df8-cad9-446c-926a-1e17551e8218" target="_blank" rel="noopener">Introduction to Digital Business Skills ↗</a></li>
+            <li><a href="https://www.life-global.org/certificate/d383edc3-5979-43ed-a5aa-a72486eaa451" target="_blank" rel="noopener">Data Science & Analytics ↗</a></li>
+            <li><a href="https://www.life-global.org/certificate/87b67d6a-3fab-4742-8b50-2ace3e17208d" target="_blank" rel="noopener">Introduction to Cybersecurity Awareness ↗</a></li>
+            <li><a href="https://www.life-global.org/certificate/1f5adc38-d43b-41c1-8347-0259e12fb252" target="_blank" rel="noopener">Critical Thinking in the AI Era ↗</a></li>
+            <li><a href="https://www.life-global.org/certificate/0e3d8860-d979-411c-9a4d-7aeaf6f01797" target="_blank" rel="noopener">Professional Networking for Career Growth ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact-wrap">
+      <span class="section-label">Let's Talk</span>
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-sub">Feel free to reach out — I'm always open to new opportunities and connections.</p>
+      <a href="mailto:lauriosheillamae3@gmail.com" class="contact-btn">
+        <span>✉</span> lauriosheillamae3@gmail.com
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Lauriosheilla Mae. All rights reserved.</p>
+  </footer>
+
+  <script>
+    /* ── Mobile nav ── */
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav  = document.getElementById('mobileNav');
+    menuToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+    function closeMobileNav() {
+      mobileNav.classList.remove('open');
+    }
+
+    /* ── Project modal data ──
+       To add/edit a project:
+       1. Add a new entry to `projects` with a matching id.
+       2. Update the onclick on the project-card to use that id.
+       3. Replace the <img src> in the card with your actual image path.
+    */
+    const projects = {
+      proj1: {
+        img:   'Projects/Picture1.png',
+        tag:   'Web Development',
+        title: 'Registrar Manangement System',
+        desc:  'A registrar system interface for managing student information. It includes pages for viewing student records, adding new entries, and organizing student data.',
+        tech:  ['HTML', 'CSS', 'JavaScript', 'PHP', 'MYSQL'],
+      },
+      proj2: {
+        img:   'Projects/Picture2.png',
+        tag:   'Web Development',
+        title: 'Barangay Incident Report System',
+        desc:  'A simple system that allows residents to report incidents and concerns in the barangay. It helps organize incident information, and makes it easier for barangay officials to monitor and manage reported cases.',
+        tech:  ['HTML', 'CSS', 'JavaScript', 'PHP', 'MYSQL'],
+      },
+      proj3: {
+        img:   'Projects/Picture3.png',
+        tag:   'App Development',
+        title: 'Grocery List Application',
+        desc:  'A simple grocery list app that helps users keep track of the items they need to buy. Users can add, edit, and delete items from the list to make grocery shopping easier.',
+        tech:  ['JAVA', 'XML'],
+      },
+      proj4: {
+        img:   'Projects/Picture4.png',
+        tag:   'App Development',
+        title: 'Grade Calculator Application',
+        desc:  'A web-based application that calculates students final grades based on quiz scores, assignments, and examination results. ',
+        tech:  ['JAVA', 'XML'],
+      },
+      proj5: {
+        img:   'Projects/Picture5.png',
+        tag:   'System and App Development',
+        title: 'Android and Web Base Disaster Preparedness Application',
+        desc:  'SafeHaven is an Android and web-based disaster preparedness and response application for Tayug, Pangasinan. It provides real-time alerts, offline maps, family tracking, SOS signaling, guides, and incident reporting. It includes an admin dashboard for officials and works both online and offline to help communities prepare for and respond to disasters.',
+        tech:  ['NEXT JS', 'TAILWIND CSS', 'REACT NATIVE', 'EXPRESS JS', 'MYSQL DATABASE', 'GIT'],
+      },
+    };
+
+    function openModal(id) {
+      const p = projects[id];
+      if (!p) return;
+      document.getElementById('modalImg').src   = p.img;
+      document.getElementById('modalImg').alt   = p.title;
+      document.getElementById('modalTag').textContent   = p.tag;
+      document.getElementById('modalTitle').textContent = p.title;
+      document.getElementById('modalDesc').textContent  = p.desc;
+      const techEl = document.getElementById('modalTech');
+      techEl.innerHTML = p.tech.map(t => `<span class="tech-tag">${t}</span>`).join('');
+      document.getElementById('modalBackdrop').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modalBackdrop').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
